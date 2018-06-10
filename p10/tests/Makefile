@@ -4,7 +4,8 @@ CC	= 	gcc
 NAME	= 	utest
 
 SRCS	= 	$(wildcard *.c) \
-		..\my_sort_word_array.c
+		..\my_sort_word_array.c \
+		..\my_advanced_sort_word_array.c
 
 OBJS	= 	$(SRCS:.c=.o)
 

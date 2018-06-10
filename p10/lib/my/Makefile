@@ -18,3 +18,5 @@ clean:
 
 fclean: clean
 	del ..\$(NAME)
+
+re:	fclean all

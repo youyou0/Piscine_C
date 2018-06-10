@@ -1,6 +1,7 @@
 # include "my.h"
 
-int	my_sort_word_array(char **tab)
+int	my_advanced_sort_word_array(char **tab, int (*cmp)
+				    (char const *, char const *))
 {
   int	smaller_str;
   char	*tmp;
@@ -14,7 +15,7 @@ int	my_sort_word_array(char **tab)
       j = i;
       while (tab[j])
 	{
-	  if (my_strcmp(tab[j], tab[smaller_str]) < 0)
+	  if ((*cmp)(tab[j], tab[smaller_str]) < 0)
 	    {
 	      smaller_str = j;
 	    }
