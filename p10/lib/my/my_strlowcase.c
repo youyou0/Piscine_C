@@ -1,5 +1,3 @@
-#include <unistd.h>
-
 char	*my_strlowcase(char *str)
 {
   int	i;
