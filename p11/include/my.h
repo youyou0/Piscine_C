@@ -43,5 +43,8 @@ char	*my_strdup(char const *src);
 char	*concat_params(int n, char **params);
 int	my_show_word_array(char * const * tab);
 char	**my_str_to_word_array(char const *str);
+int	my_sort_word_array(char **tab);
+int	my_advanced_sort_word_array(char **tab, int (*cmp)
+				    (char const *, char const *));
 
 #endif /* _MY_H_ */
