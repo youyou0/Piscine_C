@@ -3,7 +3,7 @@ CC	= 	gcc
 
 NAME	= 	utest
 
-SRCS	= 	$(wildcard *.c)
+SRCS	=	main.c
 
 OBJS	= 	$(SRCS:.c=.o)
 
