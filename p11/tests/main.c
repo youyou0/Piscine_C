@@ -21,7 +21,13 @@ int		main(int ac, char **av)
   //my_delete_nodes(&list, "hello", my_strcmp);
   //my_concat_list(&list, &list);
   print_list(list);
-  my_sort_list(&list, my_strcmp);
+  //my_sort_list(&list, my_strcmp);
   print_list(list);
+  my_add_in_sorted_list(&list, "salut", my_strcmp);
+  print_list(list);
+  linked_list_t	list2;
+  list2.data = "salut";
+  list2.next = NULL;
+  my_merge(NULL, &list2, my_strcmp);
   return (0);
 }
