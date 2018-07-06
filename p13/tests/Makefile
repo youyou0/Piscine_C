@@ -1,0 +1,26 @@
+CC	= 	gcc
+
+NAME	= 	utest
+
+SRCS	=	$(wildcard *.c)
+
+OBJS	= 	$(SRCS:.c=.o)
+
+CFLAGS	+= 	-Wextra -Wall -Werror -I../include -g3
+
+LDFLAGS += 	-L../lib -lmy -lbtree
+
+all:		$(NAME)
+
+$(NAME):	$(OBJS)
+		$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $(NAME)
+
+clean:
+		del $(OBJS)
+
+fclean: 	clean
+		del $(NAME)
+
+re: 		clean fclean all
+
+.PHONY: 	all
