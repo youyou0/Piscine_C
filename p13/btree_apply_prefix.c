@@ -1,7 +1,7 @@
 # include <stdlib.h>
 # include "btree.h"
 
-void		*btree_apply_prefix(btree_t *root, int (*applyf)(void *))
+void		btree_apply_prefix(btree_t *root, int (*applyf)(void *))
 {
   btree_t	*tmp;
 
