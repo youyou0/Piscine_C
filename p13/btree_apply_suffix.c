@@ -1,4 +1,3 @@
-# include <stdlib.h>
 # include "btree.h"
 
 void		btree_apply_suffix(btree_t *root, int (*applyf)(void *))
