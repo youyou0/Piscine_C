@@ -5,10 +5,15 @@
 
 int		main()
 {
-  btree_t	*node;
+  btree_t	*tree;
 
-  node = btree_create_node("salut");
-  my_putstr(node->item);
-  my_putchar('\n');
+  tree = NULL;
+  btree_insert_data(&tree, "hello", my_strcmp);
+  btree_insert_data(&tree, "world", my_strcmp);
+  btree_insert_data(&tree, "my", my_strcmp);
+  btree_insert_data(&tree, "name", my_strcmp);
+  btree_insert_data(&tree, "is", my_strcmp);
+  btree_insert_data(&tree, "youness", my_strcmp);
+  btree_apply_infix(tree, my_putstr);
   return (EXIT_SUCCESS);
 }
