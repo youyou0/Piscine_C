@@ -1,4 +1,5 @@
 # include <stdlib.h>
+# include "my.h"
 # include "btree.h"
 
 void		go_left(btree_t **root, void *item, int (*cmpf)())
@@ -22,7 +23,7 @@ void		go_right(btree_t **root, void *item, int (*cmpf)())
   else
     {
       (*root)->right = btree_create_node(item);
-    }  
+    }
 }
 
 void		btree_insert_data(btree_t **root, void *item, int (*cmpf)())
