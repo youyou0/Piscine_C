@@ -15,5 +15,8 @@ int		main()
   btree_insert_data(&tree, "is", my_strcmp);
   btree_insert_data(&tree, "youness", my_strcmp);
   btree_apply_infix(tree, my_putstr);
+  my_putchar('\n');
+  my_putstr(btree_search_item(tree, "is", my_strcmp));
+  my_putchar('\n');
   return (EXIT_SUCCESS);
 }
