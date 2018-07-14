@@ -1,5 +1,3 @@
-# include <stdlib.h>
-# include "my.h"
 # include "btree.h"
 
 void		go_left(btree_t **root, void *item, int (*cmpf)())
