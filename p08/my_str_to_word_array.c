@@ -39,15 +39,17 @@ int		count_words(char const *str)
   n_words = 0;
   while (str[i])
     {
-      if (!my_char_isalpha(str[i]) && str[i])
+      if (str[i] && !my_char_isalpha(str[i]))
 	{
-	  while (!my_char_isalpha(str[i]) && str[i])
+	  while (str[i] && !my_char_isalpha(str[i]))
 	    i += 1;
 	  n_words += 1;
 	}
       if (str[i])
 	i += 1;
     }
+  if (my_char_isalpha(str[i - 1]))
+    n_words += 1;
   return (n_words);
 }
 
